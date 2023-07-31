@@ -26,3 +26,24 @@ faqs.forEach(faq => {
  
   });
 });
+
+//show hidden nav menu media queray
+
+const menu = document.querySelector('.nav-menu');
+const menu2 = document.querySelector('#open-menu-butt');
+const close3 = document.querySelector('#close-menu-butt');
+
+menu2.addEventListener('click', () => {
+  menu.style.display = "flex";
+  close3.style.display = "inline-block";
+  menu2.style.display = "none";
+
+});
+
+const closeBar = () => {
+  menu.style.display = "none";
+  close3.style.display = "none";
+  menu2.style.display = "inline-block";
+}
+
+close3.addEventListener('click', closeBar)

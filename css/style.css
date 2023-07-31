@@ -148,13 +148,13 @@ nav button {
 
 }
 
-/*========== NAVBAR ============*/
+/*========== HEADER ============*/
 
 header{
   position: relative;
   top: 5rem;
   overflow: hidden;
-  height: 70vh;
+  height: 72vh;
   margin-bottom: 5rem;
 }
 
@@ -174,7 +174,7 @@ header{
 /*========== CATEGORIES ============*/
 .categories {
   background: var(--color-bg1);
-  height: 29rem;
+  height: 32rem;
 }
 
 .categories h1 {
@@ -192,7 +192,11 @@ header{
 .cateigories-container {
   display: grid;
   grid-template-columns: 40% 60%;
-  gap: 4rem;
+  /* gap: 4rem; */
+}
+
+.categories-left {
+  margin-right: 4rem;
 }
 
 .categories-left p {
@@ -374,3 +378,275 @@ header{
     top: -1.5rem;
     transform: rotate(45deg);
    }
+
+   /*========== FOOTER ============*/
+
+   footer{
+    background: var(--color-bg1);
+    padding-top: 5rem;
+    font-size: 0.9;
+   }
+
+   .footer-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+   }
+ 
+   .footer-container > div h4 {
+      margin-bottom: 1.2rem;
+   }
+
+   .footer-1 p {
+    margin: 1 0 2rem;
+   }
+
+   footer ul li {
+    margin-bottom: 0.7rem;
+   }
+
+   footer ul li a:hover {
+    text-decoration: underline;
+   }
+
+   .footer-socials {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+   }
+
+   .footer-copyright{
+    text-align: center;
+    margin-top: 4rem;
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--color-bg2);
+   }
+
+   /* RESPONSIVE DESIGN MEDIA QUERY */
+
+/*========== MEDIA QUERIES(TABLETS) ============*/
+
+@media screen and (max-width: 1024px) {
+  /* anything below 1024px will have this style */
+  .container{
+    width: var(--container-width-md);
+  }
+  
+  h1{
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3{
+    font-size: 1.4rem;
+  }
+
+  h4{
+    font-size: 1.2rem;
+  }
+
+  /*========== NAVBAR MEDIA QUERIES  ============*/
+nav button{
+  display: inline-block;
+  background: transparent;
+  font-size: 1.8rem;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+nav button#close-menu-butt {
+  display: none;
+}
+
+.nav-menu {
+  position: fixed;
+  top: 5rem;
+  right: 5%;
+  height: fit-content;
+  width: 18rem;
+  flex-direction: column;
+  gap: 0;
+  display: none;
+}
+
+.nav-menu li {
+  width: 100%;
+  height: 5.8rem;
+  animation: alternateNavitems 400ms linear forwards;
+  transform-origin: top right;
+  opacity: 0;
+}
+
+.nav-menu li:nth-child(2){
+  animation-delay: 200ms;
+}
+
+.nav-menu li:nth-child(3){
+  animation-delay: 300ms;
+}
+
+.nav-menu li:nth-child(4){
+  animation-delay: 400ms;
+}
+
+ /*========== NAVBAR MEDIA QUERIES  ============*/
+
+@keyframes alternateNavitems {
+  0% {
+    transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+  }
+  
+  100%{
+    transform: rotateZ(0) rotateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.nav-menu li a {
+  background: var(--color-primary);
+  box-shadow: -4rem 6rem 10rem rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.nav-menu li a:hover {
+  background: var(--color-bg2);
+  color: var(--color-white);
+}
+
+ /*==========HAEDER MEDIA QUERIES  ============*/
+
+header{
+  height: 85vh;
+  margin-bottom: 4rem;
+}
+
+.header-container{
+  gap: 0;
+  padding-bottom: 3rem;
+}
+
+
+ /*==========  CATEGORIES MEDIA QUERIES  ============*/
+
+ .categories {
+  height: auto;
+ }
+
+  .cateigories-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .categories-left {
+    margin-right: 0;
+  }
+
+   /*========== POPULAR COURSES MEDIA QUERIES  ============*/
+    .courses {
+      margin-top: 0;
+    }
+
+  .courses-container{
+    grid-template-columns:1fr 1fr ;
+  }
+
+   /*==========  FAQS MEDIA QUERIES  ============*/
+
+   .faqs-container{
+    grid-template-columns: 1fr;
+   }
+
+   .faq {
+    padding: 1.5rem;
+   }
+
+     /*========== FOOTER MEDIA QUERIES  ============*/
+
+     .footer-container {
+      grid-template-columns: 1fr 1fr;
+     }
+
+}
+
+
+ /*==========  MEDIA QUERIES (PHONES) ============*/
+
+ @media screen and (max-width: 600px) {
+  /* ANYTHING BELOW 600PX WILL HAVE THE STYLE ARE GIVING HERE */
+   /* body {
+    background-color: #f75842;
+   } */
+   .container {
+    width: var(--container-width-sm);
+   }
+
+    /*========== NAVBAR MEDIA QUERIES  ============*/
+
+    .nav-menu {
+      right: 3%;
+    }
+
+     /*========== HEADER MEDIA QUERIES(PHONE) ============*/
+     header{
+      height: 150vh;
+     }
+
+     .header-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+      margin-top: 0;
+     }
+
+     .header-left p {
+      margin-bottom: 1.3rem;
+     }
+
+      /*========== CATEGORIES MEDIA QUERIES  ============*/
+      .categories-right {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+      }
+
+      .category {
+        padding: 1rem;
+        border-radius: 1rem;
+      }
+
+      .category-icon {
+        margin-top: 4px;
+        display: inline-block;
+      }
+
+       /*========== POPULAR COURSES MEDIA QUERIES  ============*/
+
+       .courses-container {
+        grid-template-columns: 1fr;
+       }
+
+        /*==========  TESTEMONIAL MEDIA QUERIES  ============*/
+       .testimonial-body {
+        padding: 1.2rem;
+       }
+
+        /*========== NAVBAR MEDIA QUERIES  ============*/
+       .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+       }
+
+       .footer-1 {
+        margin: 1rem auto;
+       }
+
+       .footer-socials {
+        justify-content: center;
+       }
+ }
