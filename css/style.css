@@ -154,7 +154,7 @@ header{
   position: relative;
   top: 5rem;
   overflow: hidden;
-  height: 72vh;
+  height: 90vh;
   margin-bottom: 5rem;
 }
 
@@ -604,8 +604,12 @@ header{
       margin-top: 0;
      }
 
+     .header-left{
+      margin-bottom: 0.9rem;
+     }
+
      .header-left p {
-      margin-bottom: 1.3rem;
+      margin-bottom: 1.5rem;
      }
 
       /*========== CATEGORIES MEDIA QUERIES  ============*/
